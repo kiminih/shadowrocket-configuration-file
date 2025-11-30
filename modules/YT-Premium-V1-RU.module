@@ -13,11 +13,11 @@ AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
 [Url Rewrite]
 # /Modules/YT-Adblocker.module
 # ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad - reject-img
-^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad _ reject-200
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad _ reject
 # ======= Universal Ad Request ======= #
-^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads _ reject-200
-^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) _ reject-200
-^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext _ reject-200
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads _ reject
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) _ reject
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext _ reject
 # ======= General Video Ad request ======= #
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
 
